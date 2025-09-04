@@ -7,10 +7,10 @@ public class LevelThree
 
     public static void patternFinder()
     {
-        Pattern lookingFor = Pattern.compile("[A-Z]{3}([a-z])[A-Z]{3}");
+        Pattern lookingFor = Pattern.compile("([a-z])([A-Z]{3})([a-z])([A-Z]{3})([a-z])");
         Matcher match = lookingFor.matcher(mess);
         while(match.find()){
-            System.out.print(match.group(1) + "");
+            System.out.print(match.group(3) + "");
         }
     }
 }
